@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="widget_margin">8dp</dimen>
+    <dimen name="text_size_recipe_title">24sp</dimen>
+    <dimen name="image_size_small_icon">24dp</dimen>
+    <dimen name="text_size_small_icon">12sp</dimen>
+    <dimen name="image_size_recipe_circle">100dp</dimen>
+    <dimen name="image_size_step_circle">75dp</dimen>
+    <dimen name="text_size_step_short_desc">16sp</dimen>
+    <dimen name="text_size_step_long_desc">24sp</dimen>
+    <dimen name="text_size_widget_title">14sp</dimen>
+    <dimen name="text_size_widget_body">12sp</dimen>
+</resources>

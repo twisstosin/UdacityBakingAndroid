@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Baking Time</string>
+    <string name="share_recipe">Share Recipe</string>
+    <string name="ingredients_title">Ingredients</string>
+    <string name="steps_title">Steps</string>
+    <string name="step_number_format">Step: %1$d</string>
+    <string name="network_error_recipes">Error retrieving the recipes</string>
+    <string name="appwidget_text">Recipe Shopping List</string>
+</resources>
