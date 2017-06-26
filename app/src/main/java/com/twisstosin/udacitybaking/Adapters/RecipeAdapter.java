@@ -36,8 +36,8 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeHold
         holder.mRecipe = mRecipeList.get(position);
         Glide.with(holder.itemView.getContext())
                 .load(holder.mRecipe.getImage())
-                .placeholder(R.drawable.forkandknife)
-                .error(R.drawable.forkandknife)
+                .placeholder(R.drawable.cake)
+                .error(R.drawable.cake)
                 .dontAnimate()
                 .into(holder.mBinding.ivRecipeImage);
         holder.mBinding.tvRecipeName.setText(holder.mRecipe.getName());
