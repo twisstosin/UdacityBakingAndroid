@@ -8,11 +8,11 @@ App to allow users to discover recipes and show steps.
 ### Phone
 <div align="center" markdown="1">
 
-<img src="https://github.com/twisstosin/UdacityBakingAndroid/blob/master/screenshots/mobile_one.png" width="40%"/>
-<img src="https://github.com/twisstosin/UdacityBakingAndroid/blob/master/screenshots/mobile_two.png" width="40%"/>
-<img src="https://github.com/twisstosin/UdacityBakingAndroid/blob/master/screenshots/mobile_three.png" width="40%"/>
-<img src="https://github.com/twisstosin/UdacityBakingAndroid/blob/master/screenshots/mobile_rotated_one.png" width="40%"/>
-<img src="https://github.com/twisstosin/UdacityBakingAndroid/blob/master/screenshots/mobile_rotated_two.png" width="40%"/>
+<img src="https://github.com/twisstosin/UdacityBakingAndroid/blob/master/screenshots/mobile_one.png" width="30%"/>
+<img src="https://github.com/twisstosin/UdacityBakingAndroid/blob/master/screenshots/mobile_two.png" width="30%"/>
+<img src="https://github.com/twisstosin/UdacityBakingAndroid/blob/master/screenshots/mobile_three.png" width="30%"/>
+<img src="https://github.com/twisstosin/UdacityBakingAndroid/blob/master/screenshots/mobile_rotated_one.png" width="30%"/>
+<img src="https://github.com/twisstosin/UdacityBakingAndroid/blob/master/screenshots/mobile_rotated_two.png" width="30%"/>
 </div>
 
 ### Tablet
