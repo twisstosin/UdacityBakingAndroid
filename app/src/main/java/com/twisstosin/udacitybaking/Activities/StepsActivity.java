@@ -54,8 +54,14 @@ public class StepsActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tl_activity_step_viewpager);
         for(Step step : stepList) {
-            tabLayout.addTab(tabLayout.newTab().setText(
-                    String.format(getString(R.string.step_number_format), (step.getId() + 1))));
+            if(step.getId() == 0)
+            {
+                tabLayout.addTab(tabLayout.newTab().setText("Intro"));
+            }
+            else {
+                tabLayout.addTab(tabLayout.newTab().setText(
+                        String.format(getString(R.string.step_number_format), (step.getId()))));
+            }
         }
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);

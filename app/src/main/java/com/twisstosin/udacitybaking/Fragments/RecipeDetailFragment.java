@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.TextView;
 
 
 import com.twisstosin.udacitybaking.Adapters.StepAdapter;
@@ -47,7 +48,7 @@ public class RecipeDetailFragment extends Fragment implements RecipeDetailPresen
     private StepAdapter mStepAdapter;
     private int mStepAdapterSavedPosition = 0;
     private ArrayList<Step> mStepList = new ArrayList<>();
-    private ArrayList<CheckBox> mIngredientList = new ArrayList<>();
+    private ArrayList<TextView> mIngredientList = new ArrayList<>();
 
     public static RecipeDetailFragment newInstance(Recipe recipe) {
         Bundle bundle = new Bundle();
@@ -78,11 +79,13 @@ public class RecipeDetailFragment extends Fragment implements RecipeDetailPresen
             if(savedInstanceState.containsKey(INSTANCE_KEY_INGREDIENTS_COUNT)) {
                 int ingredientCount = savedInstanceState.getInt(INSTANCE_KEY_INGREDIENTS_COUNT);
                 for(int i=0; i<ingredientCount; i++) {
-                    CheckBox checkBox = new CheckBox(this.getContext());
-                    checkBox.setText(String.valueOf(mRecipe.getIngredients().get(i).getQuantity()) +
+                    TextView textView = new TextView(this.getContext());
+                    textView.setTextColor(getResources().getColor(R.color.white));
+                    textView.setPadding(10,12,10,12);
+                    textView.setText("- "+String.valueOf(mRecipe.getIngredients().get(i).getQuantity()) +
                             String.valueOf(mRecipe.getIngredients().get(i).getMeasure()) + " " + mRecipe.getIngredients().get(i).getIngredient());
-                    checkBox.setChecked(savedInstanceState.getBoolean(INSTANCE_KEY_INGREDIENTS_ID + String.valueOf(i)));
-                    mIngredientList.add(checkBox);
+                    //textView.setChecked(savedInstanceState.getBoolean(INSTANCE_KEY_INGREDIENTS_ID + String.valueOf(i)));
+                    mIngredientList.add(textView);
                 }
             }
         }
@@ -99,19 +102,21 @@ public class RecipeDetailFragment extends Fragment implements RecipeDetailPresen
         binding.tbToolbar.toolbar.setTitle(mRecipe.getName());
         ((AppCompatActivity) getActivity()).setSupportActionBar(binding.tbToolbar.toolbar);
 
-        //Save dynamically created checkbox view state on rotation
+        //Save dynamically created textview state on rotation
         if(mIngredientList.size()>0) {
-            for(CheckBox cbIngredientView : mIngredientList) {
-                binding.llIngredientChecklist.addView(cbIngredientView);
+            for(TextView tvIngredientView : mIngredientList) {
+                binding.llIngredientChecklist.addView(tvIngredientView);
             }
         } else {
             if (mRecipe.getIngredients() != null && mRecipe.getIngredients().size() > 0) {
                 for (Ingredient ingredient : mRecipe.getIngredients()) {
-                    CheckBox checkBox = new CheckBox(this.getContext());
-                    checkBox.setText(String.valueOf(ingredient.getQuantity()) +
+                    TextView textView = new TextView(this.getContext());
+                    textView.setTextColor(getResources().getColor(R.color.white));
+                    textView.setPadding(10,12,10,12);
+                    textView.setText("- "+String.valueOf(ingredient.getQuantity()) +
                             String.valueOf(ingredient.getMeasure()) + " " + ingredient.getIngredient());
-                    binding.llIngredientChecklist.addView(checkBox);
-                    mIngredientList.add(checkBox);
+                    binding.llIngredientChecklist.addView(textView);
+                    mIngredientList.add(textView);
                 }
             }
         }
@@ -151,7 +156,7 @@ public class RecipeDetailFragment extends Fragment implements RecipeDetailPresen
     private Intent createShareIntent() {
         String msg = mRecipe.getName() + "\n" + "----\n" +
                 getString(R.string.ingredients_title) + ":\n" + "----\n";
-        for(CheckBox ingredient : mIngredientList){
+        for(TextView ingredient : mIngredientList){
             msg += ingredient.getText() + "\n";
         }
         msg += getString(R.string.steps_title) + ":\n" + "----\n";
@@ -171,10 +176,6 @@ public class RecipeDetailFragment extends Fragment implements RecipeDetailPresen
         outState.putParcelable(INSTANCE_KEY_RECIPE, mRecipe);
         outState.putParcelableArrayList(INSTANCE_KEY_STEPS, mStepList);
         outState.putInt(INSTANCE_KEY_INGREDIENTS_COUNT, mIngredientList.size());
-        for(int ingedientId = 0; ingedientId<mIngredientList.size(); ingedientId++) {
-                    outState.putBoolean(INSTANCE_KEY_INGREDIENTS_ID + String.valueOf(ingedientId),
-                    mIngredientList.get(ingedientId).isChecked());
-        }
     }
 }
 

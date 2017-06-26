@@ -12,7 +12,9 @@
             layout="@layout/toolbar"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="0dp"
+            android:layout_width="0dp" />
 
         <com.google.android.exoplayer2.ui.SimpleExoPlayerView
             android:id="@+id/exo_step_fragment_player_view"
@@ -23,10 +25,12 @@
             app:layout_constraintTop_toBottomOf="@+id/tb_toolbar"/>
 
         <TextView
+            android:padding="20dp"
             android:id="@+id/tv_step_fragment_directions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/text_size_step_long_desc"
+            android:paddingTop="20dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/exo_step_fragment_player_view"
@@ -34,8 +38,8 @@
 
         <ImageView
             android:id="@+id/iv_step_fragment_no_video_placeholder"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:visibility="gone"
             android:src="@drawable/no_video"
             app:layout_constraintLeft_toLeftOf="parent"

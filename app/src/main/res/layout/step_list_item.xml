@@ -10,21 +10,22 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         app:cardCornerRadius="5dp"
-        app:cardElevation="4dp"
+        app:cardElevation="2dp"
         app:cardPreventCornerOverlap="false"
         app:cardUseCompatPadding="true"
-        card_view:cardBackgroundColor="@color/step_row_selector">
+        card_view:cardBackgroundColor="@color/white"
+        android:layout_marginBottom="10dp">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <de.hdodenhof.circleimageview.CircleImageView
+            <ImageView
                 android:id="@+id/iv_step_item_video_thumb"
                 android:layout_width="@dimen/image_size_step_circle"
                 android:layout_height="@dimen/image_size_step_circle"
-                app:civ_border_color="#FF000000"
-                app:civ_border_width="2dp"
+                android:padding="10dp"
+                android:background="@color/melicolor"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
@@ -34,7 +35,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/text_size_step_short_desc"
-                android:layout_marginStart="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toRightOf="@+id/iv_step_item_video_thumb"
                 app:layout_constraintTop_toTopOf="parent"

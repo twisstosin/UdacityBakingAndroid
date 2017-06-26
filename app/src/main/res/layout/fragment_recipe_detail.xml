@@ -14,12 +14,12 @@
                 layout="@layout/toolbar"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
-            <android.support.v7.widget.CardView
+                app:layout_constraintTop_toTopOf="parent" />
+            <RelativeLayout
                 android:id="@+id/cv_recipe_detail_ingredient_heading_holder"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="5dp"
+                app:cardCornerRadius="10dp"
                 app:cardPreventCornerOverlap="false"
                 app:cardUseCompatPadding="true"
                 app:cardElevation="4dp"
@@ -31,65 +31,59 @@
                     android:layout_height="match_parent">
                     <TextView
                         android:id="@+id/tv_recipe_detail_ingredient_heading"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="@string/ingredients_title"
                         android:textSize="@dimen/text_size_recipe_title"
                         android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:background="@color/colorPrimaryDark"
                         android:layout_gravity="center"
+                        android:gravity="center_horizontal"
                         tools:text="Ingredients"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
-                    <View
-                        android:id="@+id/v_ingredient_header_divider_line"
-                        android:layout_width="0dp"
-                        android:layout_height="1dp"
-                        android:background="@android:color/darker_gray"
-                        app:layout_constraintLeft_toLeftOf="parent"
-                        app:layout_constraintRight_toRightOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_recipe_detail_ingredient_heading"/>
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:padding="15dp"/>
                     <LinearLayout
+                        android:background="@color/melicolor"
+                        android:padding="15dp"
                         android:id="@+id/ll_ingredient_checklist"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/v_ingredient_header_divider_line">
+                        app:layout_constraintTop_toBottomOf="@+id/tv_recipe_detail_ingredient_heading">
                     </LinearLayout>
                 </android.support.constraint.ConstraintLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/cv_recipe_detail_steps_heading_holder"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="5dp"
-                app:cardPreventCornerOverlap="false"
-                app:cardUseCompatPadding="true"
-                app:cardElevation="4dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cv_recipe_detail_ingredient_heading_holder">
+            </RelativeLayout>
                 <TextView
+                    android:background="@color/colorPrimaryDark"
+                    android:textColor="@color/white"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cv_recipe_detail_ingredient_heading_holder"
+                    android:padding="15dp"
                     android:id="@+id/tv_recipe_detail_steps_heading"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
                     android:text="@string/steps_title"
                     android:textSize="@dimen/text_size_recipe_title"
                     android:textStyle="bold"
                     android:layout_gravity="center"
                     tools:text="Steps"/>
-            </android.support.v7.widget.CardView>
             <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="20dp"
+                android:padding="8dp"
                 android:id="@+id/recipe_detail_steps_recycler_view"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cv_recipe_detail_steps_heading_holder"/>
+                app:layout_constraintTop_toBottomOf="@+id/tv_recipe_detail_steps_heading"/>
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
 </layout>

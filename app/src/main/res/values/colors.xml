@@ -3,10 +3,12 @@
     <color name="colorPrimary">#F2285A</color>
     <color name="colorPrimaryDark">#C72C50</color>
     <color name="colorPrimaryLight">#f48fb1</color>
-    <color name="colorAccent">#5BACD6</color>
-    <color name="colorPrimaryText">#212121</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="lightBlue">#5BACD6</color>
+    <color name="colorPrimaryText">#424242</color>
     <color name="colorSecondaryText">#757575</color>
     <color name="icons">#212121</color>
     <color name="divider">#BDBDBD</color>
     <color name="white">#FFFFFF</color>
+    <color name="melicolor">#ff5983</color>
 </resources>

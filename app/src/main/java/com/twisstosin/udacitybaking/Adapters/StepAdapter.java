@@ -40,14 +40,17 @@ public class StepAdapter extends RecyclerView.Adapter<StepAdapter.StepHolder> {
         if(holder.mStep.getVideoURL()!=null && !holder.mStep.getVideoURL().matches("")) {
             Glide.with(holder.itemView.getContext())
                     .load(holder.mStep.getThumbnailURL())
-                    .placeholder(R.drawable.video_no_thumb)
-                    .error(R.drawable.video_no_thumb)
+                    .placeholder(R.drawable.ic_videocam_black_24dp)
+                    .error(R.drawable.ic_videocam_black_24dp)
                     .dontAnimate()
                     .into(holder.mBinding.ivStepItemVideoThumb);
         } else {
-            holder.mBinding.ivStepItemVideoThumb.setImageResource(R.drawable.no_video);
+            holder.mBinding.ivStepItemVideoThumb.setImageResource(R.drawable.ic_videocam_off_black_24dp);
         }
-        holder.mBinding.tvStepListStepNumber.setText(String.valueOf(holder.mStep.getId() + 1) + ": ");
+        if(holder.mStep.getId() == 0)
+            holder.mBinding.tvStepListStepNumber.setText("   ");
+        else
+        holder.mBinding.tvStepListStepNumber.setText(String.valueOf(holder.mStep.getId()) + ": ");
         holder.mBinding.tvStepListStepShortDesc.setText(holder.mStep.getShortDescription());
     }
 

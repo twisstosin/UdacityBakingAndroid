@@ -1,15 +1,25 @@
 # Baking Time
-[![Baking Time](https://github.com/twisstosin/PopularMovies1/blob/master/app/src/main/res/mipmap-hdpi/ic_launcher.png)](https://github.com/twisstosin/PopularMovies1)
+[![Baking Time](https://github.com/twisstosin/UdacityBakingAndroid/blob/master/app/src/main/res/mipmap-hdpi/ic_launcher.png)](https://github.com/twisstosin/UdacityBakingAndroid)
 
 ALC/Udacity Last Project.
 App to allow users to discover recipes and show steps.
 # Screenshots
+
+### Mobile
 <div align="center" markdown="1">
 
-<img src="https://github.com/twisstosin/PopularMovies2/blob/master/screenshots/screenshot_one.png" width="40%"/>
-<img src="https://github.com/twisstosin/PopularMovies2/blob/master/screenshots/screenshot_two.png" width="40%"/>
-<img src="https://github.com/twisstosin/PopularMovies2/blob/master/screenshots/screenshot_three.png" width="40%"/>
+<img src="https://github.com/twisstosin/UdacityBakingAndroid/blob/master/screenshots/mobile_one.png" width="40%"/>
+<img src="https://github.com/twisstosin/UdacityBakingAndroid/blob/master/screenshots/mobile_two.png" width="40%"/>
+<img src="https://github.com/twisstosin/UdacityBakingAndroid/blob/master/screenshots/mobile_three.png" width="40%"/>
 </div>
+
+### Tablet
+<div align="center" markdown="1">
+
+<img src="https://github.com/twisstosin/UdacityBakingAndroid/blob/master/screenshots/tab_one.png" width="40%"/>
+<img src="https://github.com/twisstosin/UdacityBakingAndroid/blob/master/screenshots/tab_two.png" width="40%"/>
+</div>
+
 
 # License
 
