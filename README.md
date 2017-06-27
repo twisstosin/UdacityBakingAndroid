@@ -11,7 +11,7 @@ App to allow users to discover recipes and show steps.
 <img src="https://github.com/twisstosin/UdacityBakingAndroid/blob/master/screenshots/mobile_one.png" width="30%"/>
 <img src="https://github.com/twisstosin/UdacityBakingAndroid/blob/master/screenshots/mobile_two.png" width="30%"/>
 <img src="https://github.com/twisstosin/UdacityBakingAndroid/blob/master/screenshots/mobile_three.png" width="30%"/>
-<img src="https://github.com/twisstosin/UdacityBakingAndroid/blob/master/screenshots/mobile_rotated_one.png" width="30%"/>
+<img src="https://github.com/twisstosin/UdacityBakingAndroid/blob/master/screenshots/mobile_rotated.png" width="30%"/>
 <img src="https://github.com/twisstosin/UdacityBakingAndroid/blob/master/screenshots/mobile_rotated_two.png" width="30%"/>
 </div>
 
