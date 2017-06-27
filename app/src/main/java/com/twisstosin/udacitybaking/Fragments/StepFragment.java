@@ -216,4 +216,11 @@ public class StepFragment extends Fragment implements ExoPlayer.EventListener {
             mExoPlayer.seekTo(0);
         }
     }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        releasePlayer();
+    }
 }
